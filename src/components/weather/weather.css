@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.weather-widget {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  border-radius: 15px;
+  width: 270px;
+  background: hsl(240, 100%, 22%);
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.widget-wrapper {
+  min-height: 100%;
+  overflow: auto;
+  padding: 0 20px 20px;
+  box-sizing: border-box;
+  max-height: 580px;
+}
+
+/* Town Card */
+.town-card {
+  padding: 12px 0;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
+}
+
+.town-card:last-of-type {
+  border-bottom: none;
+}
+
+.town-card__header {
+  margin-bottom: 4px;
+}
+
+.town-card__city {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.town-card__main {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.town-card__icon {
+  width: 56px;
+  height: 56px;
+}
+
+.town-card__temp {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.town-card__description {
+  font-size: 12px;
+  margin: 4px 0 8px;
+  opacity: 0.9;
+  text-transform: capitalize;
+}
+
+.town-card__details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.town-card__detail {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  opacity: 0.85;
+}
+
+/* Widget Empty */
+.widget-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 10px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.widget-empty p {
+  margin: 8px 0 0;
+  font-size: 14px;
+}
+
+.widget-empty__hint {
+  font-size: 12px !important;
+  opacity: 0.6;
+}
+
+/* Settings Toggle */
+.settings-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  z-index: 10;
+}
+
+.settings-toggle:hover {
+  opacity: 1;
+}
+
+/* Settings Panel */
+.settings-panel {
+  padding: 0 0 12px;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.2);
+  margin-top: 8px;
+}
+
+.settings-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.settings-panel__header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.settings-panel__header button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.settings-panel__header button:hover {
+  opacity: 1;
+}
+
+.settings-panel__cities {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.settings-panel__city {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  background: hsla(0, 0%, 100%, 0.1);
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: grab;
+  user-select: none;
+}
+
+.settings-panel__city:active {
+  cursor: grabbing;
+  background: hsla(0, 0%, 100%, 0.2);
+}
+
+.settings-panel__grip {
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.settings-panel__city span {
+  flex: 1;
+}
+
+.settings-panel__delete {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.settings-panel__delete:hover {
+  opacity: 1;
+}
+
+.settings-panel__add h4 {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.settings-panel__input-row {
+  display: flex;
+  gap: 6px;
+}
+
+.settings-panel__input {
+  flex: 1;
+  padding: 6px 10px;
+  border: 1px solid hsla(0, 0%, 100%, 0.3);
+  border-radius: 6px;
+  background: hsla(0, 0%, 100%, 0.1);
+  color: white;
+  font-size: 13px;
+  outline: none;
+  font-family: inherit;
+}
+
+.settings-panel__input::placeholder {
+  color: hsla(0, 0%, 100%, 0.4);
+}
+
+.settings-panel__input:focus {
+  border-color: hsla(0, 0%, 100%, 0.6);
+}
+
+.settings-panel__add-btn {
+  background: hsla(0, 0%, 100%, 0.15);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.settings-panel__add-btn:hover {
+  background: hsla(0, 0%, 100%, 0.25);
+}
+
+.settings-panel__error {
+  color: hsl(0, 80%, 70%);
+  font-size: 12px;
+  margin: 6px 0 0;
+}
