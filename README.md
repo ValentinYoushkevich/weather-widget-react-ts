@@ -1,73 +1,62 @@
-# Welcome to project
+# Weather Widget
 
-## Project info
+Веб-виджет погоды с поддержкой нескольких городов, качества воздуха и геолокации.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Технологии
 
-## How can I edit this code?
+Проект собран на:
 
-There are several ways of editing your application.
+- **Vite** — сборка и dev-сервер
+- **TypeScript** — типизация
+- **React 18** — UI
+- **React Router DOM** — маршрутизация
+- **TanStack React Query** — работа с серверным состоянием (при необходимости)
+- **Tailwind CSS** — стили
+- **shadcn-ui** (Radix UI) — базовые UI-компоненты
+- **Lucide React** — иконки
+- **OpenWeatherMap API** — погода и качество воздуха (Air Pollution API)
+- **Yandex Geocoder API** — определение города по геолокации
 
-**Use Lovable**
+## Возможности виджета
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+- **Несколько городов** — добавление, удаление и изменение порядка городов.
+- **Определение по геолокации** — при первом запуске без сохранённых городов предлагается город по текущим координатам (через Yandex Geocoder).
+- **Сохранение списка** — выбранные города хранятся в `localStorage` (ключ `wWidget`) и подгружаются при следующем визите.
+- **Перетаскивание (drag-and-drop)** — в настройках можно менять порядок карточек городов.
+- **Погода по городу** — температура, «ощущается как», описание, иконка погоды (OpenWeatherMap).
+- **Детали по карточке** — ветер (скорость и направление), давление, влажность, точка росы, видимость.
+- **Качество воздуха (AQI)** — индекс 1–5 (Good / Fair / Moderate / Poor / Very Poor) и компоненты: PM2.5, PM10, O₃, NO₂, CO, SO₂.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Поддерживаемые данные
 
-**Use your preferred IDE**
+| Данные            | Описание                          |
+|-------------------|-----------------------------------|
+| Температура       | °C, округление в сторону нуля     |
+| Ощущается как     | °C                                |
+| Точка росы        | °C (расчёт по температуре и влажности) |
+| Ветер             | м/с и направление (N, NE, E, …)   |
+| Давление          | hPa                               |
+| Влажность         | %                                 |
+| Видимость         | км                                |
+| Описание погоды   | Текст и иконка OpenWeatherMap     |
+| AQI               | 1–5 + компоненты загрязнения      |
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Запуск
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
 npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Сборка: `npm run build`. Превью сборки: `npm run preview`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Редактирование и деплой (Lovable)
 
-**Use GitHub Codespaces**
+- **URL проекта**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+- Редактирование: Lovable или локально (IDE) с push в репозиторий.
+- Публикация: Share → Publish в Lovable.
+- Свой домен: Project → Settings → Domains → [Connect Domain](https://docs.lovable.dev/features/custom-domain#custom-domain).
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Требования
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- Node.js и npm (рекомендуется установка через [nvm](https://github.com/nvm-sh/nvm#installing-and-updating)).
