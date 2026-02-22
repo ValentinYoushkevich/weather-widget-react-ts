@@ -76,6 +76,18 @@
   opacity: 0.85;
 }
 
+.town-card__aqi-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin-top: 8px;
+  padding: 6px 8px;
+  background: hsla(0, 0%, 100%, 0.08);
+  border-radius: 6px;
+  font-size: 11px;
+  opacity: 0.75;
+}
+
 /* Widget Empty */
 .widget-empty {
   display: flex;
