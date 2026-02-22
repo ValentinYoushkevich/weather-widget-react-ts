@@ -50,12 +50,10 @@ npm run dev
 
 Сборка: `npm run build`. Превью сборки: `npm run preview`.
 
-## Редактирование и деплой (Lovable)
+## Редактирование и деплой
 
-- **URL проекта**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
-- Редактирование: Lovable или локально (IDE) с push в репозиторий.
-- Публикация: Share → Publish в Lovable.
-- Свой домен: Project → Settings → Domains → [Connect Domain](https://docs.lovable.dev/features/custom-domain#custom-domain).
+- **URL проекта**: https://valentinyoushkevich.github.io/weather-widget-react-ts/
+- Публикация: Share → Publish в github.io.
 
 ## Требования
 
